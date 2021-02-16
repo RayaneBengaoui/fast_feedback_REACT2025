@@ -6,8 +6,6 @@ import { auth } from "firebase";
 
 import useSWR from "swr";
 
-import { FastFeedbackIcon } from "../public/icon";
-
 import EmptyState from "@/components/EmptyState";
 import SiteTableSkeleton from "@/components/SiteTableSkeleton";
 import DashboardShell from "@/components/DashboardShell";

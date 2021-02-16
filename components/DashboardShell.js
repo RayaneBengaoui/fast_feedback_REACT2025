@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useAuth } from "@/lib/auth";
-import AddSiteModel from "./AddSiteModel";
+import AddSiteModel from "./AddSiteModal";
 
 import { FastFeedbackIcon } from "../public/icon";
 
