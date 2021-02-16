@@ -5,17 +5,26 @@ import { useAuth } from "@/lib/auth";
 import { auth } from "firebase";
 
 import { FastFeedbackIcon } from "../public/icon";
-1;
 
 import EmptyState from "@/components/EmptyState";
+import SiteTableSkeleton from "@/components/SiteTableSkeleton";
+import DashboardShell from "@/components/DashboardShell";
 
 const Dashboard = () => {
   const auth = useAuth();
 
   if (!auth.user) {
-    return "Loading...";
+    return (
+      <DashboardShell>
+        <SiteTableSkeleton />
+      </DashboardShell>
+    );
   }
-  return <EmptyState />;
+  return (
+    <DashboardShell>
+      <EmptyState />
+    </DashboardShell>
+  );
 };
 
 export default Dashboard;
